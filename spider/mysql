@@ -1,0 +1,17 @@
+CREATE DATABASE cufedb DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+show databases;
+use cufedb;
+
+CREATE TABLE `201508_cufe_bookinfo` (
+	`callNo` varchar(20)  COMMENT '索书号',
+	`bookName` text COMMENT '书名',
+	`authorName` text COMMENT '作者',
+	`pubName` text  COMMENT '出版社',
+	`pubYear` text  COMMENT '出版时间',
+	`isbnNo` text COMMENT 'ISBN号',
+	PRIMARY KEY (`callNo`)
+) 	ENGINE=MyISAM DEFAULT CHARSET=utf8;
+show tables;
+select * from 201508_cufe_bookinfo;
+select count(*) from 201508_cufe_bookinfo;
+truncate table 201508_cufe_bookinfo;
